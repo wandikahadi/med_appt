@@ -6,17 +6,23 @@ import Sign_Up from "./pages/Sign_Up";
 import Login from "./pages/Login";
 import HealthBlog from "./pages/HealthBlog";
 import MainLayout from "./layouts/MainLayout";
+import Home from "./pages/Home";
+import Consultation from "./pages/Consultation";
+import SelfCheckup from "./pages/SelfCheckup";
 
 export default function AppRoutes() {
     return (
         <Routes>
             <Route path="/" element={<MainLayout />}>
                 <Route index element={<App />} />
+                <Route path="home" element={<Home />} />
                 <Route path="appointments" element={<Appointment />} />
                 <Route path="blog" element={<HealthBlog title="Health Blog" />} />
                 <Route path="reviews" element={<Reviews title="Reviews" />} />
                 <Route path="signup" element={<Sign_Up title="Sign Up" />} />
                 <Route path="login" element={<Login title="Login" />} />
+                <Route path="/consultation" element={<Consultation />} />
+                <Route path="/self-checkup" element={<SelfCheckup />} />
             </Route>
         </Routes>
     );

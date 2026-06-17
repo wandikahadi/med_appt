@@ -17,7 +17,7 @@ function App() {
       </p>
 
       <Link
-        to="/appointments"
+        to="/home"
         className="mt-6 rounded-full bg-blue-500 px-10 py-3 text-sm font-medium text-white hover:bg-blue-600 sm:px-12"
       >
         Get Started
