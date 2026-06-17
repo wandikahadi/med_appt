@@ -1,3 +1,6 @@
+import { useState } from "react";
+import ReviewModal from "../components/ReviewModal";
+
 const reviews = [
     {
         id: 1,
@@ -16,6 +19,14 @@ const reviews = [
 ];
 
 export default function Reviews() {
+    const [isOpen, setIsOpen] = useState(false);
+    const [selectedDoctor, setSelectedDoctor] = useState(null);
+
+    function handleGiveReview(doctor) {
+        setSelectedDoctor(doctor);
+        setIsOpen(true);
+    }
+
     return (
         <main className="relative z-10 min-h-[calc(100vh-88px)] px-5 py-10 sm:px-10 lg:px-16">
             <div className="mx-auto max-w-5xl">
@@ -42,6 +53,7 @@ export default function Reviews() {
                                     <td className="px-4 py-5">
                                         <button
                                             disabled={item.disabled}
+                                            onClick={() => handleGiveReview(item)}
                                             className={`rounded px-8 py-2 text-sm font-semibold text-white ${item.disabled
                                                     ? "cursor-not-allowed bg-slate-300"
                                                     : "bg-blue-500 hover:bg-blue-600"
@@ -59,6 +71,13 @@ export default function Reviews() {
                     </table>
                 </div>
             </div>
+
+            {isOpen && (
+                <ReviewModal
+                    doctor={selectedDoctor}
+                    onClose={() => setIsOpen(false)}
+                />
+            )}
         </main>
     );
 }
