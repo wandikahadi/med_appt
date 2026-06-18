@@ -10,21 +10,21 @@ import Home from "./pages/Home";
 import Consultation from "./pages/Consultation";
 import SelfCheckup from "./pages/SelfCheckup";
 import InstantConsultation from './components/InstantConsultation';
+import Notification from './components/Notification';
 
 export default function AppRoutes() {
     return (
-        <Routes>
-            <Route path="/" element={<MainLayout />}>
-                <Route index element={<App />} />
-                <Route path="home" element={<Home />} />
-                <Route path="appointments" element={<Appointment />} />
-                <Route path="blog" element={<HealthBlog title="Health Blog" />} />
-                <Route path="reviews" element={<Reviews title="Reviews" />} />
-                <Route path="signup" element={<Sign_Up title="Sign Up" />} />
-                <Route path="login" element={<Login title="Login" />} />
+        <Notification>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Sign_Up />} />
+                <Route path="/appointments" element={<Appointment />} />
+                <Route path="/blog" element={<HealthBlog />} />
+                <Route path="/reviews" element={<Reviews />} />
                 <Route path="/instant-consultation" element={<InstantConsultation />} />
                 <Route path="/self-checkup" element={<SelfCheckup />} />
-            </Route>
-        </Routes>
+            </Routes>
+        </Notification>
     );
 }

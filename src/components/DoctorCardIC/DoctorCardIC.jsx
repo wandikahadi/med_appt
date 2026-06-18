@@ -23,9 +23,20 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
     const newAppointment = {
       id: uuidv4(),
       ...appointmentData,
+      doctorName: name,
+      doctorSpeciality: speciality,
     };
+
     const updatedAppointments = [...appointments, newAppointment];
     setAppointments(updatedAppointments);
+
+    localStorage.setItem("doctorData", JSON.stringify({
+      name,
+      speciality,
+    }));
+
+    localStorage.setItem(name, JSON.stringify(newAppointment));
+
     setShowModal(false);
   };
 
