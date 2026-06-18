@@ -9,6 +9,7 @@ import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
 import Consultation from "./pages/Consultation";
 import SelfCheckup from "./pages/SelfCheckup";
+import InstantConsultation from './components/InstantConsultation';
 
 export default function AppRoutes() {
     return (
@@ -21,7 +22,7 @@ export default function AppRoutes() {
                 <Route path="reviews" element={<Reviews title="Reviews" />} />
                 <Route path="signup" element={<Sign_Up title="Sign Up" />} />
                 <Route path="login" element={<Login title="Login" />} />
-                <Route path="/consultation" element={<Consultation />} />
+                <Route path="/instant-consultation" element={<InstantConsultation />} />
                 <Route path="/self-checkup" element={<SelfCheckup />} />
             </Route>
         </Routes>

@@ -5,7 +5,7 @@ const services = [
         title: "Instant Consultation",
         image:
             "https://img.freepik.com/free-vector/online-doctor-concept-illustration_114360-1831.jpg",
-        path: "/consultation",
+        path: "/instant-consultation",
     },
     {
         title: "Book an Appointment",
