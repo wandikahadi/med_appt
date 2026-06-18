@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ProfileForm from './ProfileForm';
 
 export default function Navbar() {
     return (
@@ -12,6 +13,7 @@ export default function Navbar() {
                 <Link to="/appointments">Appointments</Link>
                 <Link to="/blog">Health Blog</Link>
                 <Link to="/reviews">Reviews</Link>
+                <ProfileForm />
             </div>
 
             <div className="hidden items-center gap-3 sm:flex">
