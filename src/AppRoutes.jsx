@@ -11,6 +11,7 @@ import Consultation from "./pages/Consultation";
 import SelfCheckup from "./pages/SelfCheckup";
 import InstantConsultation from './components/InstantConsultation';
 import Notification from './components/Notification';
+import GiveReviews from "./components/ReviewForm/GiveReviews";
 
 export default function AppRoutes() {
     return (
@@ -21,6 +22,7 @@ export default function AppRoutes() {
                 <Route path="/signup" element={<Sign_Up />} />
                 <Route path="/appointments" element={<Appointment />} />
                 <Route path="/blog" element={<HealthBlog />} />
+                <Route path="/give-reviews" element={<GiveReviews />} />
                 <Route path="/reviews" element={<Reviews />} />
                 <Route path="/instant-consultation" element={<InstantConsultation />} />
                 <Route path="/self-checkup" element={<SelfCheckup />} />
