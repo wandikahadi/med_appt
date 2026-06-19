@@ -16,7 +16,7 @@ const initialReviews = [
   },
 ];
 
-export default function Reviews() {
+export default function GiveReviews() {
   const [reviews, setReviews] = useState(initialReviews);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedDoctor, setSelectedDoctor] = useState(null);

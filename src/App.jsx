@@ -1,29 +1,36 @@
-import { Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import App from "./App";
+import Appointment from "./pages/Appointment";
+import Sign_Up from "./pages/auth/Sign_Up";
+import Login from "./pages/auth/Login";
+import HealthBlog from "./pages/HealthBlog";
+import MainLayout from "./layouts/MainLayout";
+import Home from "./pages/Home";
+import Consultation from "./pages/Consultation";
+import SelfCheckup from "./pages/SelfCheckup";
+import InstantConsultation from './components/InstantConsultation';
+import Notification from './components/Notification';
+import Profile from "./pages/Profile";
+import ProfileEdit from "./pages/ProfileEdit";
+import Reports from "./pages/Reports";
+import GiveReviews from "./pages/GiveReviews";
 
-function App() {
-  return (
-    <main className="relative z-10 flex min-h-[calc(100vh-88px)] flex-col items-center justify-center px-5 text-center">
-      <h2 className="text-4xl font-extrabold leading-tight text-black sm:text-5xl md:text-6xl lg:text-7xl">
-        Your Health
-        <br />
-        <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-          Our Responsibility
-        </span>
-      </h2>
-
-      <p className="mt-8 max-w-3xl text-sm leading-relaxed text-slate-400 sm:text-base">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque at quae
-        ducimus. Suscipit omnis quibusdam non cum rem voluptatem!
-      </p>
-
-      <Link
-        to="/home"
-        className="mt-6 rounded-full bg-blue-500 px-10 py-3 text-sm font-medium text-white hover:bg-blue-600 sm:px-12"
-      >
-        Get Started
-      </Link>
-    </main>
-  );
+export default function App() {
+    return (
+        <Notification>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Sign_Up />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/profile/edit" element={<ProfileEdit />} />
+                <Route path="/appointments" element={<Appointment />} />
+                <Route path="/reports" element={<Reports />} />
+                <Route path="/blog" element={<HealthBlog />} />
+                <Route path="/reviews" element={<GiveReviews />} />
+                <Route path="/instant-consultation" element={<InstantConsultation />} />
+                <Route path="/self-checkup" element={<SelfCheckup />} />
+            </Routes>
+        </Notification>
+    );
 }
-
-export default App;
