@@ -69,7 +69,7 @@ const Notification = ({ children }) => {
                     </p>
 
                     <p className="text-sm">
-                        <strong>Time Slot:</strong> {appointmentData?.time}
+                        <strong>Time Slot:</strong> {appointmentData?.timeSlot}
                     </p>
                 </div>
             )}

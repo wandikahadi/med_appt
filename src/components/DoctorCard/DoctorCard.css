@@ -1,0 +1,28 @@
+.doctor-popup-wrapper {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.doctor-popup-content {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.appointment-booked-title {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.bookedInfo {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.bookedInfo button {
+    width: 100%;
+    margin-top: 10px;
+}
