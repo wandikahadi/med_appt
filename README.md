@@ -83,10 +83,10 @@ src/
 ├── pages/
 │   ├── Home.jsx
 │   ├── Appointment.jsx
-│   ├── Reviews.jsx
+│   ├── GiveReviews.jsx
 │   ├── HealthBlog.jsx
 │   ├── Profile.jsx
-│   ├── ProfileEdit.jsx
+│   ├── ProfileCard.jsx
 │   ├── Reports.jsx
 │   └── auth/
 │       ├── Login.jsx

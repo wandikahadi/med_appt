@@ -10,7 +10,7 @@ import SelfCheckup from "./pages/SelfCheckup";
 import InstantConsultation from './components/InstantConsultation';
 import Notification from './components/Notification';
 import Profile from "./pages/Profile";
-import ProfileEdit from "./pages/ProfileEdit";
+import ProfileCard from "./pages/ProfileCard";
 import Reports from "./pages/Reports";
 import GiveReviews from "./pages/GiveReviews";
 
@@ -22,7 +22,7 @@ export default function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Sign_Up />} />
                 <Route path="/profile" element={<Profile />} />
-                <Route path="/profile/edit" element={<ProfileEdit />} />
+                <Route path="/profile/edit" element={<ProfileCard />} />
                 <Route path="/appointments" element={<Appointment />} />
                 <Route path="/reports" element={<Reports />} />
                 <Route path="/blog" element={<HealthBlog />} />
