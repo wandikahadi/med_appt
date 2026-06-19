@@ -40,21 +40,38 @@ const Notification = ({ children }) => {
             {/* Render Navbar component */}
             <Navbar ></Navbar>
             {/* Render children components */}
-            {children}
+            <main className="relative z-0">
+                {children}
+            </main>
             {/* Display appointment details if user is logged in and appointmentData is available */}
             {isLoggedIn && appointmentData && (
-                <>
-                    <div className="appointment-card">
-                        <div className="appointment-card__content">
-                            {/* Display title for appointment details */}
-                            <h3 className="appointment-card__title">Appointment Details</h3>
-                            <p className="appointment-card__message">
-                                {/* Display doctor's name from doctorData */}
-                                <strong>Doctor:</strong> {doctorData?.name}
-                            </p>
-                        </div>
-                    </div>
-                </>
+                <div className="fixed bottom-6 right-6 z-[9999] w-[320px] rounded-md bg-blue-500 p-5 text-white shadow-lg">
+                    <h3 className="mb-4 text-xl font-bold">Appointment Details</h3>
+
+                    <p className="text-sm">
+                        <strong>Doctor:</strong> {doctorData?.name}
+                    </p>
+
+                    <p className="text-sm">
+                        <strong>Speciality:</strong> {doctorData?.speciality}
+                    </p>
+
+                    <p className="text-sm">
+                        <strong>Name:</strong> {appointmentData?.name}
+                    </p>
+
+                    <p className="text-sm">
+                        <strong>Phone Number:</strong> {appointmentData?.phoneNumber}
+                    </p>
+
+                    <p className="text-sm">
+                        <strong>Date of Appointment:</strong> {appointmentData?.date}
+                    </p>
+
+                    <p className="text-sm">
+                        <strong>Time Slot:</strong> {appointmentData?.time}
+                    </p>
+                </div>
             )}
         </div>
     );
