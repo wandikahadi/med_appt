@@ -36,11 +36,6 @@
     text-align: right; /* Right-align text */
 }
 
-.signup-text1 span {
-    color: #3c79a7; /* Set text color */
-    font-weight: 600; /* Set font weight to bold */
-    cursor: pointer; /* Change cursor to pointer on hover */
-}
 
 /* Styles for the signup form section */
 .signup-form {

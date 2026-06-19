@@ -11,6 +11,8 @@ import Consultation from "./pages/Consultation";
 import SelfCheckup from "./pages/SelfCheckup";
 import InstantConsultation from './components/InstantConsultation';
 import Notification from './components/Notification';
+import Profile from "./pages/Profile";
+import ProfileEdit from "./pages/ProfileEdit";
 
 export default function AppRoutes() {
     return (
@@ -19,6 +21,8 @@ export default function AppRoutes() {
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Sign_Up />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/profile/edit" element={<ProfileEdit />} />
                 <Route path="/appointments" element={<Appointment />} />
                 <Route path="/blog" element={<HealthBlog />} />
                 <Route path="/reviews" element={<Reviews />} />
