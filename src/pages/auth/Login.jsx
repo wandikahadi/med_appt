@@ -10,7 +10,7 @@ const Login = () => {
 
     useEffect(() => {
         if (sessionStorage.getItem("auth-token")) {
-            navigate("/");
+            navigate("/home");
         }
     }, [navigate]);
 
@@ -31,7 +31,7 @@ const Login = () => {
             sessionStorage.setItem("auth-token", json.authtoken);
             sessionStorage.setItem("email", email);
 
-            navigate("/");
+            navigate("/home");
             window.location.reload();
         } else {
             if (json.errors) {

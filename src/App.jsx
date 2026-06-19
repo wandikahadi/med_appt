@@ -13,12 +13,14 @@ import Profile from "./pages/Profile";
 import ProfileCard from "./pages/ProfileCard";
 import Reports from "./pages/Reports";
 import GiveReviews from "./pages/GiveReviews";
+import LandingPage from './pages/LandingPage';
 
 export default function App() {
     return (
         <Notification>
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/home" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Sign_Up />} />
                 <Route path="/profile" element={<Profile />} />

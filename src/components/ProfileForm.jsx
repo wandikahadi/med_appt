@@ -88,7 +88,7 @@ const ProfileForm = () => {
                 setUserDetails(updatedDetails);
                 setEditMode(false);
                 alert("Profile Updated Successfully!");
-                navigate("/");
+                navigate("/home");
             } else {
                 throw new Error("Failed to update profile");
             }
